@@ -8,8 +8,12 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 function makeGhost(options) {
     options = options || {};
+    var srv = server(options);
 
-    return server(options);
+    // load our custom helpers
+    require('extensions/loyaltylion_helpers')();
+
+    return srv;
 }
 
 module.exports = makeGhost;
