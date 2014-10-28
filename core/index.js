@@ -11,7 +11,7 @@ function makeGhost(options) {
     var srv = server(options);
 
     // load our custom helpers
-    require('./extensions/loyaltylion_helpers')();
+    require('./extensions/loyaltylion_helpers')(); 
 
     return srv;
 }
